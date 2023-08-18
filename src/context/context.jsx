@@ -8,7 +8,7 @@ import { getAuth,
     onAuthStateChanged,
     signOut } from "firebase/auth";
 
-import { getFirestore, collection, addDoc, getDocs} from 'firebase/firestore';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyBXOfmvWXSlJBr67qG6uTT-XX1czH10oYQ",
@@ -42,11 +42,11 @@ const firebaseConfig = {
     }, []);
 
     const SignupUserWithEmailAndPassword = (email, password) => {
-        createUserWithEmailAndPassword(firebaseAuth, email, password).then((value) => alert(value)).catch((err) => console.log(err));
+        createUserWithEmailAndPassword(firebaseAuth, email, password).then((value) => alert("Signup Success")).catch((err) => console.log(err));
     }
 
     const loginWithEmailAndPassword = async (email, password) => {
-        await signInWithEmailAndPassword(firebaseAuth, email, password).then((value) => alert("Sign up success")).catch((err) => console.log(err));
+        await signInWithEmailAndPassword(firebaseAuth, email, password).then((value) => alert("Sign up success")).catch((err) => alert(err));
     }
 
     const signinWithGoogle = () => {

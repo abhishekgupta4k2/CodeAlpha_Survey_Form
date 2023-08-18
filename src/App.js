@@ -16,9 +16,10 @@ function App() {
     <div className="App">
       < MyNavbar />
       <Routes>
-      <Route path='/signin' element={<Signin />} />
+      {/* <Route path='/' strict element={<h1>Home Page</h1>} /> */}
+      <Route path='/signin' strict element={<Signin />} />
       <Route path='/survey/form' element={<MyForm />} />
-      <Route path='/' element={<Signup /> } />
+      <Route path='/' strict element={<Signup /> } />
       <Route path='/survey/details' element={< CardPage /> } />
       <Route path='/signout' element={< Signout /> } />
       </Routes>

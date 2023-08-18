@@ -147,7 +147,8 @@ const MyForm = () => {
         <Button type="submit">Submit Form</Button>
       </Form>
     </div>
-  );
+
+)
 };
 
 export default MyForm;

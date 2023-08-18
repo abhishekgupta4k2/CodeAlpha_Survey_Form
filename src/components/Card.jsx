@@ -12,11 +12,12 @@ const CardPage = () => {
 
     // console.log(formData);
 
+          
     if(formData) {
   return (
     <div className='container mt-4 card'>
         <h2>CodeAlpha survey details</h2>
-        <h5>Your latest survey</h5>
+        <h5>Your first survey</h5>
         <div className='container card mt-5 mb-5'>
         <p> UserID: {formData.userId} </p>
         <p> Name: {formData.firstName} {formData.lastName} </p>
@@ -25,9 +26,10 @@ const CardPage = () => {
         <p> State: {formData.state} </p>
         </div>
         </div>
+      
   )
       }
-      else <h1>First Sign up and fill survey form</h1>
+      else { return <h1>First Sign up and fill survey form</h1> }
 }
 
 export default CardPage;
